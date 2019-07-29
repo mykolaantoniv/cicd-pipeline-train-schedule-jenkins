@@ -20,21 +20,21 @@ pipeline {
         }
         stage('Deploy to QA Env') {
             steps {
-                input 'Does the Dev Environment look OK?
+                input 'Does the Dev Environment look OK?'
                 milestone(3600)
                 echo 'Deploying to QA Env'
             }
         }
         stage('Deploy to Stage Env') {
             steps {
-                input 'Does the QA Environment look OK?
+                input 'Does the QA Environment look OK?'
                 milestone(3600)
                 echo 'Deploying to Stage Env'
             }
         }
         stage('Deploy to Prod Env') {
             steps {
-                input 'Does the Stage Environment look OK?
+                input 'Does the Stage Environment look OK?'
                 milestone(3600)
                 echo 'Deploying to Prod Env'
             }
